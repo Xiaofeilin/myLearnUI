@@ -1,3 +1,6 @@
+html{
+	/*height:100%;*/
+}
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
@@ -5,20 +8,143 @@ body {
     color: #333;
     background-color: #777;
 }
+/*navbar*/
 .navbar-inverse{
-	background-color:#222;
+	background-color:#303030;
 } 
 .navbar-wrapper .navbar {
     padding-right: 15px;
     padding-left: 15px;
 }
-.navbar-wrapper>.container {
+.navbar-wrapper>.container ,.wall-wrapper>.container{
     padding-right: 0;
     padding-left: 0;
 }
+.navbar-inverse .navbar-toggle {
+    border-color: #3f3f3f;
+}
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #3f3f3f;
+}
+.navbar-inverse .navbar-brand{
+	color: #cfcfcf;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #afafaf;
+}
 
+/*swiper*/
+.swiper-container {
+	position:absolute;
+	top:0;
+    width: 100%;
+    height: 100%;
+    z-index:-100;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #777;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/*wall*/
+.wall-wrapper{
+	height:500px;
+}
+.wall{
+	background-color:rgba(255,255,255,0.7);
+}
+
+/*LPmenu*/
+.LPmenu{
+	position:fixed;
+	top:0;
+	left:-250px;
+	height: 100vh;
+	width:250px;
+	background-color:rgba(255,255,255,0.7);
+	border-right:3px solid rgba(119,119,119,0.7);
+	transition: all 0.25s;
+	/*z-index:10000;*/
+}
+#tm{
+	display: none;
+}
+.LPmenu label {
+	/*display:inline-block;*/
+	color: #fff; 
+	/*background-color:rgba(255,255,255,0.7);*/
+	font-size:20px;
+	/*font: bold 20px Montserrat; */
+	text-align: center; 
+	border-radius: 0 4px 4px 0;
+	display: block; 
+	height:50px;
+	position: absolute; 
+	left: 250px; 
+	top: 50vh;
+	cursor: pointer; 
+	text-transform: uppercase;
+	transition: all 0.25s;
+	transform: scale(1,2.5);
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite; 
+}
+.LPmenu label i{
+	line-height:50px;
+}
+
+.sidenav {
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	bottom: 0; 
+	padding-top: 100px;
+}
+.sidenav li {
+	list-style-type: none;
+}
+.sidenav a { 
+	color: white; text-decoration: none; 
+}
+.sidenav b {
+	font: bold 12px/48px Montserrat; 
+	display: block;
+	opacity: 0; 
+	transform: translateX(50px); 
+	transition: all 0.4s;
+}
+#tm:checked ~ .sidenav b {opacity: 1; transform: translateX(0);}
+#tm:checked ~ .sidenav li:nth-child(1) b {transition-delay: 0.08s;}
+#tm:checked ~ .sidenav li:nth-child(2) b {transition-delay: 0.16s;}
+#tm:checked ~ .sidenav li:nth-child(3) b {transition-delay: 0.24s;}
+#tm:checked ~ .sidenav li:nth-child(4) b {transition-delay: 0.32s;}
+#tm:checked ~ .sidenav li:nth-child(5) b {transition-delay: 0.40s;}
+#tm:checked ~ .sidenav li:nth-child(6) b {transition-delay: 0.48s;}
+
+@-webkit-keyframes bluePulse {
+  from { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #2daebf; -webkit-box-shadow: 0 0 18px #2daebf; }
+  to { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
+}
+.blue.button { -webkit-animation-name: bluePulse; -webkit-animation-duration: 4s; }
 /*媒体查询*/
 @media (min-width: 768px){
+	/*navbar*/
 	.navbar-wrapper{
 		margin-top:20px;
 	}
@@ -31,7 +157,7 @@ body {
 	}
 	.nav>li>a {
     background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.34) 100%) repeat scroll 0 0 transparent; 
-    border: 1px solid #121212; 
+    border: 1px solid #1f1f1f; 
     border-right: none; 
     box-shadow: 0 2px 3px rgba(255, 255, 255, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
     color: #777777; 
@@ -73,9 +199,19 @@ body {
 	    color: #e9e9e9 ;
 	} 
 	.nav>li:last-child>a { 
-	    border-right: 1px solid #121212; 
+	    border-right: 1px solid #1f1f1f; 
 	}
 	.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     border-color:rgba(0,0,0,0);
+	}
+	.nav-login{
+		float:right;
+	}
+	/*wall*/
+	.wall{
+		border-radius: 4px;
+	}
+	.nav-login{
+		background-color:#353535;
 	}
 }
