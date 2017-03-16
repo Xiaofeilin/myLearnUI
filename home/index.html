@@ -15,97 +15,84 @@
 	<script type="text/javascript" src="./public/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div>
-		<!-- swiper -->
+	<!-- 总体容器 -->
+	<div class="total-container clearfix">
+	    <!-- 左侧菜单 -->
+	    <div class="clearfix LPmenu">
+	    	<!-- 弹出框 -->
+	    	<div class="Pop">
+		    	<!-- 按钮部分 -->
+	    		<input type="checkbox" id="tm">
+	    		<label class="blue button" id="ck" for="tm">
+	    			<i class="fa fa-angle-double-right fa-2x"></i>
+	    		</label>
+	    		<!-- 弹出内容 -->
+				<ul class="sidenav clearfix">
+					<li><a href="#"><b>Tasks</b></a></li>
+					<li><a href="#"><b>Messages</b></a></li>
+					<li><a href="#"><b>New Post</b></a></li>
+					<li><a href="#"><b>Settings</b></a></li>
+					<li><a href="#"><b>Starred</b></a></li>
+					<li><a href="#"><b>Logout</b></a></li>
+				</ul>
+			</div>
+	    </div>
+
+	    <!-- 右侧内容 -->
+	    <div class="main-contant container">
+	    	<!-- nav 导航栏 -->
+			<div class="navbar-wrapper">
+			 	<div class="container">
+			 		<nav class="navbar navbar-inverse navbar-static-top">
+			 			<div class="navbar-header">
+			 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				                <span class="sr-only">Toggle navigation</span>
+				                <span class="icon-bar"></span>
+				                <span class="icon-bar"></span>
+				                <span class="icon-bar"></span>
+			              	</button>
+		              		<a class="navbar-brand" href="#">Project name</a>
+			 			</div>
+			 			<div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
+			              	<ul class="nav navbar-nav">
+				                <li><a href="#">Home</a></li>
+				                <li><a href="#">About</a></li>
+				                <li><a href="#">Contact</a></li>
+				                <li class="dropdown">
+				                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			                  		<ul class="dropdown-menu">
+					                    <li><a href="#">Action</a></li>
+					                    <li><a href="#">Another action</a></li>
+					                    <li><a href="#">Something else here</a></li>
+					                    <li role="separator" class="divider"></li>
+					                    <li class="dropdown-header">Nav header</li>
+					                    <li><a href="#">Separated link</a></li>
+				                    	<li><a href="#">One more separated link</a></li>
+				                  	</ul>
+				                </li>
+			              	</ul>
+			              	<ul class="nav navbar-nav nav-login">
+			              		<li>
+			              			<a href="#">login</a>
+			              		</li><li>
+			              			<a href="#">register</a>
+			              		</li>
+			              	</ul>
+			            </div>
+			 		</nav>
+			 	</div>
+			</div>
+	    </div>
+
+	    <!-- swiper -->
 		<div class="swiper-container">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide"><img src="image/001.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="image/002.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="image/004.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="image/005.jpg" alt=""></div>
+	            <div class="swiper-slide"><a href="#"></a></div>
+	            <div class="swiper-slide"><a href="#"></a></div>
+	            <div class="swiper-slide"><a href="#"></a></div>
+	            <div class="swiper-slide"><a href="#"></a></div>
 	        </div>
 	    </div>
-	    <!-- left-menu -->
-		<div class="LPmenu">
-			<input type="checkbox" id="tm">
-			<ul class="sidenav">
-				<li><a href="#"><b>Tasks</b></a></li>
-				<li><a href="#"><b>Messages</b></a></li>
-				<li><a href="#"><b>New Post</b></a></li>
-				<li><a href="#"><b>Settings</b></a></li>
-				<li><a href="#"><b>Starred</b></a></li>
-				<li><a href="#"><b>Logout</b></a></li>
-			</ul>
-			<label class="blue button" id="ck" for="tm"><i class="fa fa-angle-double-right fa-2x"></i></label>
-		</div>
-		<!-- nav -->
-		<div class="navbar-wrapper">
-		 	<div class="container">
-		 		<nav class="navbar navbar-inverse navbar-static-top">
-		 			<div class="navbar-header">
-		 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			                <span class="sr-only">Toggle navigation</span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-		              	</button>
-	              		<a class="navbar-brand" href="#">Project name</a>
-		 			</div>
-		 			<div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
-		              	<ul class="nav navbar-nav">
-			                <li><a href="#">Home</a></li>
-			                <li><a href="#">About</a></li>
-			                <li><a href="#">Contact</a></li>
-			                <li class="dropdown">
-			                  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-		                  		<ul class="dropdown-menu">
-				                    <li><a href="#">Action</a></li>
-				                    <li><a href="#">Another action</a></li>
-				                    <li><a href="#">Something else here</a></li>
-				                    <li role="separator" class="divider"></li>
-				                    <li class="dropdown-header">Nav header</li>
-				                    <li><a href="#">Separated link</a></li>
-			                    	<li><a href="#">One more separated link</a></li>
-			                  	</ul>
-			                </li>
-		              	</ul>
-		              	<ul class="nav navbar-nav nav-login">
-		              		<li>
-		              			<a href="#">login</a>
-		              		</li><li>
-		              			<a href="#">register</a>
-		              		</li>
-		              	</ul>
-		            </div>
-		 		</nav>
-		 	</div>
-		</div>
-	    <!-- wall -->
-		<div class="wall-wrapper">
-			<div class="container">
-				<div class="wall">
-					<div class="container">
-						<h2>高尔基《海燕》</h2>
-						<p>在苍茫的大海上，狂风卷集着乌云。在乌云和大海之间，海燕像黑色的闪电，在高傲的飞翔。</p>
-						<p>一会儿翅膀碰着波浪，一会儿箭一般地直冲向乌云，它叫喊着，——就在这鸟儿勇敢的叫喊声里，乌云听出了欢乐。</p>
-						<p>在这叫喊声里——充满着对暴风雨的渴望！在这叫喊声里，乌云听出了愤怒的力量、热情的火焰和胜利的信心。</p>
-						<p>海鸥在暴风雨来临之前呻吟着，——呻吟着，它们在大海上飞窜，想把自己对暴风雨的恐惧，掩藏到大海深处。</p>
-						<p>海鸭也在呻吟着，——它们这些海鸭啊，享受不了生活的战斗的欢乐：轰隆隆的雷声就把它们吓坏了。</p>
-						<p>蠢笨的企鹅，胆怯地把肥胖的身体躲藏到悬崖底下……只有那高傲的海燕，勇敢地，自由自在的，在泛起白沫的大海上飞翔！</p>
-						<p>乌云越来越暗，越来越低，向海面直压下来，而波浪一边歌唱，一边冲向高空，去迎接那雷声。</p>
-						<p>雷声轰响。波浪在愤怒的飞沫中呼叫，跟狂风争鸣。看吧，狂风紧紧抱起一层层巨浪，恶狠狠地把它们甩到悬崖上，把这些大块的翡翠摔成尘雾和碎末。</p>
-						<p>海燕叫喊着，飞翔着，像黑色的闪电，箭一般地穿过乌云，翅膀掠起波浪的飞沫。</p>
-						<p>看吧，它飞舞着，像个精灵，——高傲的、黑色的暴风雨的精灵，——它在大笑，它又在号叫……它笑些乌云，它因为欢乐而号叫！</p>
-						<p>这个敏感的精灵，——它从雷声的震怒里，早就听出了困乏，它深信，乌云遮不住太阳，——是的，遮不住的！</p>
-						<p>狂风吼叫……雷声轰响……</p>
-						<p>一堆堆乌云，像青色的火焰，在无底在大海上燃烧。大海抓住闪电的箭光，把它们熄灭在自己的深渊里。这些闪电的影子，活像一条条火蛇，在大海里蜿蜒游动，一晃就消失了。</p>
-						<p>——暴风雨！暴风雨就要来啦！</p>
-						<p>这是勇敢的海燕，在怒吼的大海上，在闪电中间，高傲的飞翔；这是胜利的预言家在叫喊：</p>
-						<p>——让暴风雨来得更猛烈些吧</p>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </body>
 <script>
@@ -129,10 +116,12 @@
 		$("#ck").click(function(){
 			var o = $("#tm").prop("checked");
 			if(o == true){
-				$(".LPmenu").css({"transform":""});
+				$(".LPmenu").removeClass("open");
+				$(".main-contant").removeClass("left-open");
 				$(this).children("i").removeClass("fa-rotate-180");
 			}else{
-				$(".LPmenu").css({"transform":"translateX(250px)"});
+				$(".LPmenu").addClass("open");
+				$(".main-contant").addClass("left-open");
 				$(this).children("i").addClass("fa-rotate-180");
 			}
 		});
